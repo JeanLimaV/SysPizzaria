@@ -8,6 +8,7 @@
         <entry key="Common:buildConfiguration" value="Debug" />
         <entry key="Common:noBuild" value="false" />
         <entry key="Common:outputFolder" value="Migrations" />
+        <entry key="Common:targetFramework" value="net6.0" />
       </map>
     </option>
   </component>

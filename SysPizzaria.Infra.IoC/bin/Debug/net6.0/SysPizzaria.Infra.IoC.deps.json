@@ -14,6 +14,7 @@
           "Microsoft.EntityFrameworkCore.Design": "7.0.12",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.12",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.12",
+          "Microsoft.Extensions.Configuration": "7.0.0",
           "Migrations": "1.0.1",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
           "SysPizzaria.Application": "1.0.0",
@@ -361,6 +362,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.12",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.12",
+          "Microsoft.Extensions.Configuration": "7.0.0",
           "Migrations": "1.0.1",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
           "SysPizzaria.Domain": "1.0.0"

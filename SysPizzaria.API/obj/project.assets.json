@@ -163,6 +163,18 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/7.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "7.0.12"
+        },
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
         "type": "package",
         "build": {
@@ -628,6 +640,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.12",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.12",
+          "Microsoft.Extensions.Configuration": "7.0.0",
           "Migrations": "1.0.1",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
           "SysPizzaria.Domain": "1.0.0"
@@ -647,6 +660,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Microsoft.EntityFrameworkCore": "7.0.12",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.12",
+          "Microsoft.Extensions.Configuration": "7.0.0",
           "Migrations": "1.0.1",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
           "SysPizzaria.Application": "1.0.0",
@@ -899,6 +913,31 @@
         "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.xml",
         "microsoft.entityframeworkcore.relational.7.0.12.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools/7.0.12": {
+      "sha512": "4ZW43BJzV5aY8rkrSxhej1xiiDr1dLfFl/MitpHn4a5QJpQqctJ0kl/MF1U3CAIKnkeC4RaC9ZjJjODDbHtdeQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/7.0.12",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/_._",
+        "microsoft.entityframeworkcore.tools.7.0.12.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PS2.psd1",
+        "tools/EntityFrameworkCore.PS2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/net461/any/ef.exe",
+        "tools/net461/win-arm64/ef.exe",
+        "tools/net461/win-x86/ef.exe",
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
@@ -1830,6 +1869,9 @@
     "net6.0": [
       "Microsoft.EntityFrameworkCore >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.12",
+      "Microsoft.EntityFrameworkCore.Relational >= 7.0.12",
+      "Microsoft.EntityFrameworkCore.Tools >= 7.0.12",
+      "Microsoft.Extensions.Configuration >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "SysPizzaria.Application >= 1.0.0",
       "SysPizzaria.Infra.Data >= 1.0.0",
@@ -1837,19 +1879,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jeanc\\.nuget\\packages\\": {}
+    "/home/void_/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.API\\SysPizzaria.API.csproj",
+      "projectUniqueName": "/home/void_/SysPizzaria/SysPizzaria.API/SysPizzaria.API.csproj",
       "projectName": "SysPizzaria.API",
-      "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.API\\SysPizzaria.API.csproj",
-      "packagesPath": "C:\\Users\\jeanc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.API\\obj\\",
+      "projectPath": "/home/void_/SysPizzaria/SysPizzaria.API/SysPizzaria.API.csproj",
+      "packagesPath": "/home/void_/.nuget/packages/",
+      "outputPath": "/home/void_/SysPizzaria/SysPizzaria.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jeanc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/void_/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1861,14 +1903,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Application\\SysPizzaria.Application.csproj": {
-              "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Application\\SysPizzaria.Application.csproj"
+            "/home/void_/SysPizzaria/SysPizzaria.Application/SysPizzaria.Application.csproj": {
+              "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Application/SysPizzaria.Application.csproj"
             },
-            "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.Data\\SysPizzaria.Infra.Data.csproj": {
-              "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.Data\\SysPizzaria.Infra.Data.csproj"
+            "/home/void_/SysPizzaria/SysPizzaria.Infra.Data/SysPizzaria.Infra.Data.csproj": {
+              "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Infra.Data/SysPizzaria.Infra.Data.csproj"
             },
-            "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.IoC\\SysPizzaria.Infra.IoC.csproj": {
-              "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.IoC\\SysPizzaria.Infra.IoC.csproj"
+            "/home/void_/SysPizzaria/SysPizzaria.Infra.IoC/SysPizzaria.Infra.IoC.csproj": {
+              "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Infra.IoC/SysPizzaria.Infra.IoC.csproj"
             }
           }
         }
@@ -1893,6 +1935,20 @@
             "target": "Package",
             "version": "[7.0.12, )"
           },
+          "Microsoft.EntityFrameworkCore.Relational": {
+            "target": "Package",
+            "version": "[7.0.12, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[7.0.12, )"
+          },
+          "Microsoft.Extensions.Configuration": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.5.0, )"
@@ -1904,8 +1960,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -1917,7 +1972,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -1926,7 +1981,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'log4net 2.0.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'log4net 2.0.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "log4net",
       "targetGraphs": [
         "net6.0"
@@ -1936,7 +1991,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Migrations 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Migrations 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "Migrations",
       "targetGraphs": [
         "net6.0"

@@ -12,7 +12,7 @@ namespace SysPizzaria.Infra.IoC
 {
     public static class DependencyInjectionApp
     {
-        public static void ConfigureApplication(this IServiceCollection services, IConfiguration configuration)
+        public static void ConfigureApplication(this IServiceCollection services, string? configuration)
         {
             services.ConfigureDbContext(configuration);
             

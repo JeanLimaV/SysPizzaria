@@ -10,6 +10,9 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.12",
           "Microsoft.EntityFrameworkCore.Design": "7.0.12",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.12",
+          "Microsoft.EntityFrameworkCore.Tools": "7.0.12",
+          "Microsoft.Extensions.Configuration": "7.0.0",
           "Swashbuckle.AspNetCore": "6.5.0",
           "SysPizzaria.Application": "1.0.0",
           "SysPizzaria.Infra.Data": "1.0.0",
@@ -115,6 +118,11 @@
             "assemblyVersion": "7.0.12.0",
             "fileVersion": "7.0.1223.47811"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/7.0.12": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "7.0.12"
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
@@ -398,6 +406,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.12",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.12",
+          "Microsoft.Extensions.Configuration": "7.0.0",
           "Migrations": "1.0.1",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
           "SysPizzaria.Domain": "1.0.0"
@@ -412,6 +421,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Microsoft.EntityFrameworkCore": "7.0.12",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.12",
+          "Microsoft.Extensions.Configuration": "7.0.0",
           "Migrations": "1.0.1",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
           "SysPizzaria.Application": "1.0.0",
@@ -506,6 +516,13 @@
       "sha512": "sha512-apLzFyjM3s/voBiaMCJPwIOk5SxA1N6GmSbhqthfbUDn8mX+kxZl4RXNdaoBLzPKfUg4EoqCtt0YON/g9YXruQ==",
       "path": "microsoft.entityframeworkcore.relational/7.0.12",
       "hashPath": "microsoft.entityframeworkcore.relational.7.0.12.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/7.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4ZW43BJzV5aY8rkrSxhej1xiiDr1dLfFl/MitpHn4a5QJpQqctJ0kl/MF1U3CAIKnkeC4RaC9ZjJjODDbHtdeQ==",
+      "path": "microsoft.entityframeworkcore.tools/7.0.12",
+      "hashPath": "microsoft.entityframeworkcore.tools.7.0.12.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",

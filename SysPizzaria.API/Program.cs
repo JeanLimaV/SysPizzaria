@@ -4,22 +4,23 @@ using SysPizzaria.Infra.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<BaseDbContext>(options =>
-    options.UseMySql(mySqlConnection,
-        ServerVersion.AutoDetect(mySqlConnection)));
+builder.
+    Configuration
+    .GetConnectionString("DefaultConnection");
 
-builder
-    .Services
-    .ConfigureApplication(builder.Configuration);
+builder.Services.ConfigureApplication(builder.Configuration.GetConnectionString("DefaultConnection"));
 
-builder
-    .Services
-    .AddServices();
+// builder
+//     .Services
+//     .ConfigureApplication(builder.Configuration);
 
-builder
-    .Services
-    .CreateAutoMapper();
+// builder
+//     .Services
+//     .AddServices();
+
+// builder
+//     .Services
+//     .CreateAutoMapper();
 
 builder
     .Services
