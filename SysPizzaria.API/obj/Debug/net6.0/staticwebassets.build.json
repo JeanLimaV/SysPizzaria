@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "A1hlyARlGMU6hxpTVIMDy92LB8jCLMWzmIHJ4kxcRvA=",
+  "Source": "SysPizzaria.API",
+  "BasePath": "_content/SysPizzaria.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

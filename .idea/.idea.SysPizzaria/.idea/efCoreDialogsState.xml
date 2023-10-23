@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EfCoreDialogsState">
+    <option name="keyValueStorage">
+      <map>
+        <entry key="Common:84028a83-420e-46ff-b3c2-d3d3998902e4:dbContext" value="SysPizzaria.Infra.Data.Context.BaseDbContext" />
+        <entry key="Common:9d4ff660-a61d-4dec-9806-d7af0bff9d85:dbContext" value="SysPizzaria.Infra.Data.Context.BaseDbContext" />
+        <entry key="Common:buildConfiguration" value="Debug" />
+        <entry key="Common:noBuild" value="false" />
+        <entry key="Common:outputFolder" value="Migrations" />
+      </map>
+    </option>
+  </component>
+</project>
