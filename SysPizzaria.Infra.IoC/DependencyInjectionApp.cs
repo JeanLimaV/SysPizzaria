@@ -12,7 +12,7 @@ namespace SysPizzaria.Infra.IoC
 {
     public static class DependencyInjectionApp
     {
-        public static void ConfigureApplication(this IServiceCollection services, string? configuration)
+        public static void ConfigureApplication(this IServiceCollection services, IConfiguration configuration)
         {
             services.ConfigureDbContext(configuration);
             
@@ -24,8 +24,8 @@ namespace SysPizzaria.Infra.IoC
         public static void AddServices(this IServiceCollection services)
         {
             services.AddScoped<IPersonService, PersonService>();
-            services.AddScoped<IProductService, ProductService>();
-            services.AddScoped<IPurchaseService, PurchaseService>();
+             services.AddScoped<IProductService, ProductService>();
+            //services.AddScoped<IPurchaseService, PurchaseService>();
             services.AddScoped<INotificator, Notificator>();
         }
 

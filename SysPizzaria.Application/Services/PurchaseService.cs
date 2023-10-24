@@ -54,14 +54,15 @@ namespace SysPizzaria.Application.Services
             throw new NotImplementedException();
         }
         
-        private async Task<bool> PurchaseValidate(Purchase purchase)
+        private bool PurchaseValidate(Purchase purchase)
         {
-            var validationResult = await _validator.ValidateAsync(purchase);
-            if (validationResult.IsValid) 
-                return true;
+            if (!purchase.Validate(out var validationResult))
+            {
+                _notificator.Handle(validationResult.Errors);
+                return false;
+            }
 
-            _notificator.Handle(validationResult.Errors);
-            return false;
+            return true;
         }
     }
 }

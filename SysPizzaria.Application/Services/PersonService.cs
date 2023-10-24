@@ -12,15 +12,13 @@ namespace SysPizzaria.Application.Services
     {
         private readonly IMapper _mapper;
         private readonly IPeopleRepository _peopleRepository;
-        private readonly IValidator<Person> _validator;
         private readonly INotificator _notificator;
         
-        public PersonService(IMapper mapper, IPeopleRepository peopleRepository, INotificator notificator, IValidator<Person> validator)
+        public PersonService(IMapper mapper, IPeopleRepository peopleRepository, INotificator notificator)
         {
             _mapper = mapper;
             _peopleRepository = peopleRepository;
             _notificator = notificator;
-            _validator = validator;
         }
 
         public async Task<PersonDTO> GetById(int id)
@@ -47,7 +45,7 @@ namespace SysPizzaria.Application.Services
                 throw new AppDomainUnloadedException("Esta Pessoa já está cadastrada!");
             
             var person = _mapper.Map<Person>(personDto);
-            if (!await PersonValidate(person))
+            if (!PersonValidate(person))
                 return null;
             
             await _peopleRepository.CreateAsync(person);
@@ -61,7 +59,7 @@ namespace SysPizzaria.Application.Services
                 throw new AppDomainUnloadedException("Não existe nenhuma pessoa com esse Id cadastrada!");
 
             var person = _mapper.Map<Person>(personDto);
-            if (!await PersonValidate(person))
+            if (!PersonValidate(person))
                 return null;
             
             await _peopleRepository.UpdateAsync(person);
@@ -79,14 +77,15 @@ namespace SysPizzaria.Application.Services
             await _peopleRepository.DeleteAsync(person);
         }
         
-        private async Task<bool> PersonValidate(Person person)
+        private bool PersonValidate(Person person)
         {
-            var validationResult = await _validator.ValidateAsync(person);
-            if (validationResult.IsValid) 
-                return true;
+            if (!person.Validate(out var validationResult))
+            {
+                _notificator.Handle(validationResult.Errors);
+                return false;
+            }
 
-            _notificator.Handle(validationResult.Errors);
-            return false;
+            return true;
         }
     }
 }

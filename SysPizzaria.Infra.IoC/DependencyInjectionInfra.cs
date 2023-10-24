@@ -10,29 +10,23 @@ namespace SysPizzaria.Infra.IoC
 {
     public static class DependencyInjectionInfra
     {
-        public static void ConfigureDbContext(this IServiceCollection services, string connectionString)
+        public static void ConfigureDbContext(this IServiceCollection services,IConfiguration configuration)
         {
-            var serverVersion = new MySqlServerVersion(ServerVersion.AutoDetect(connectionString));
-            services
-                .AddDbContext<BaseDbContext>(dbContextOptions =>
-                    {
-                        dbContextOptions
-                            .UseMySql(connectionString, serverVersion)
-                            .LogTo(Console.WriteLine, LogLevel.Information)
-                            .EnableSensitiveDataLogging()
-                            .EnableDetailedErrors();
-                    }
-                );
-
+            services.AddDbContext<BaseDbContext>(options =>
+            {
+                var connectionString = configuration.GetConnectionString("DefaultConnection");
+                var serverVersion = ServerVersion.AutoDetect(connectionString);
+                options.UseMySql(connectionString, serverVersion);
+                options.EnableDetailedErrors();
+                options.EnableSensitiveDataLogging();
+            });
         }
-
         public static void AddRepositories(this IServiceCollection services)
         {
             services.AddScoped<IPeopleRepository, PeopleRepository>();
             services.AddScoped<IProductsRepository, ProductsRepository>();
             services.AddScoped<IPurchasesRepository, PurchasesRepository>();
         }
-
         public static void UseMigration(this IServiceProvider services)
         {
             using var scope = services.CreateScope();

@@ -12,15 +12,13 @@ namespace SysPizzaria.Application.Services
     {
         private readonly IMapper _mapper;
         private readonly IProductsRepository _productsRepository;
-        private readonly IValidator<Product> _validator;
         private readonly INotificator _notificator;
 
-        public ProductService(IMapper mapper, IProductsRepository productsRepository, INotificator notificator, IValidator<Product> validator)
+        public ProductService(IMapper mapper, IProductsRepository productsRepository, INotificator notificator)
         {
             _mapper = mapper;
             _productsRepository = productsRepository;
             _notificator = notificator;
-            _validator = validator;
         }
 
         public async Task<ProductDTO> GetById(int id)
@@ -47,7 +45,7 @@ namespace SysPizzaria.Application.Services
                 throw new AppDomainUnloadedException("Esse Produto já está cadastrado!");
 
             var product = _mapper.Map<Product>(productDto);
-            if (!await ProductValidate(product))
+            if (!ProductValidate(product))
                 return null;
 
             await _productsRepository.CreateAsync(product);
@@ -62,7 +60,7 @@ namespace SysPizzaria.Application.Services
                 throw new AppDomainUnloadedException("Não existe nenhum produto com esse Id cadastrado!");
 
             var product = _mapper.Map<Product>(productDto);
-            if (!await ProductValidate(product))
+            if (!ProductValidate(product))
                 return null;
 
             await _productsRepository.UpdateAsync(product);
@@ -80,14 +78,15 @@ namespace SysPizzaria.Application.Services
             await _productsRepository.DeleteAsync(product);
         }
         
-        private async Task<bool> ProductValidate(Product product)
+        private bool ProductValidate(Product product)
         {
-            var validationResult = await _validator.ValidateAsync(product);
-            if (validationResult.IsValid) 
-                return true;
+            if (!product.Validate(out var validationResult))
+            {
+                _notificator.Handle(validationResult.Errors);
+                return false;
+            }
 
-            _notificator.Handle(validationResult.Errors);
-            return false;
+            return true;
         }
     }
 }

@@ -4,24 +4,6 @@ using SysPizzaria.Infra.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.
-    Configuration
-    .GetConnectionString("DefaultConnection");
-
-builder.Services.ConfigureApplication(builder.Configuration.GetConnectionString("DefaultConnection"));
-
-// builder
-//     .Services
-//     .ConfigureApplication(builder.Configuration);
-
-// builder
-//     .Services
-//     .AddServices();
-
-// builder
-//     .Services
-//     .CreateAutoMapper();
-
 builder
     .Services
     .AddControllers();
@@ -33,6 +15,18 @@ builder
 builder
     .Services
     .AddSwaggerGen();
+
+builder
+    .Services.
+    ConfigureApplication(builder.Configuration);
+
+builder
+    .Services    
+    .AddServices();
+    
+builder
+    .Services
+    .CreateAutoMapper();
 
 var app = builder.Build();
 
