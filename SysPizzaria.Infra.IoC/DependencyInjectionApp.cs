@@ -31,21 +31,7 @@ namespace SysPizzaria.Infra.IoC
 
         public static void CreateAutoMapper(this IServiceCollection services)
         {
-            var provider = CreateServiceProvider();
-
-            var mappingConfig = new MapperConfiguration(mc =>
-            {
-                mc.ConstructServicesUsing(provider.GetServices);
-                mc.AddProfile(new AutoMapperProfile());
-            });
-
-            mappingConfig.CreateMapper();
-        }
-
-        private static ServiceProvider CreateServiceProvider()
-        {
-            var services = new ServiceCollection();
-            return services.BuildServiceProvider();
+            services.AddAutoMapper(x => x.AddProfile<AutoMapperProfile>());
         }
     }
 }

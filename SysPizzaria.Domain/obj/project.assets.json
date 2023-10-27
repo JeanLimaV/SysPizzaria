@@ -996,19 +996,19 @@
     ]
   },
   "packageFolders": {
-    "/home/void_/.nuget/packages/": {}
+    "C:\\Users\\jeanc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/void_/SysPizzaria/SysPizzaria.Domain/SysPizzaria.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\SysPizzaria.Domain.csproj",
       "projectName": "SysPizzaria.Domain",
-      "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Domain/SysPizzaria.Domain.csproj",
-      "packagesPath": "/home/void_/.nuget/packages/",
-      "outputPath": "/home/void_/SysPizzaria/SysPizzaria.Domain/obj/",
+      "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\SysPizzaria.Domain.csproj",
+      "packagesPath": "C:\\Users\\jeanc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/void_/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\jeanc\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1049,7 +1049,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -1058,7 +1059,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }
