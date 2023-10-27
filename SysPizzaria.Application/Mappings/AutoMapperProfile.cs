@@ -9,7 +9,7 @@ public class AutoMapperProfile : Profile
     public AutoMapperProfile()
     {
         #region Person
-        CreateMap<Person, PersonDTO>().ReverseMap();
+        CreateMap<PersonDTO, Person>().ReverseMap();
         #endregion
 
         #region Product

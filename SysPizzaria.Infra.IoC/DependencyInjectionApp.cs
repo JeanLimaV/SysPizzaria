@@ -24,8 +24,8 @@ namespace SysPizzaria.Infra.IoC
         public static void AddServices(this IServiceCollection services)
         {
             services.AddScoped<IPersonService, PersonService>();
-             services.AddScoped<IProductService, ProductService>();
-            //services.AddScoped<IPurchaseService, PurchaseService>();
+            services.AddScoped<IProductService, ProductService>();
+            // services.AddScoped<IPurchaseService, PurchaseService>();
             services.AddScoped<INotificator, Notificator>();
         }
 

@@ -14,19 +14,23 @@ namespace SysPizzaria.Infra.Data.Repositories
             _db = db;
         }
         
-        public async Task<Product> GetByIdAsync(int id)
+         public async Task<Product> GetByCodErp(string codErp)
+         {
+             return await _db.Products.FirstOrDefaultAsync(p => p.CodERP == codErp);
+         }
+         
+        public async Task<Product?> GetByIdAsync(int id)
         {
-            return await _db.Products.FirstOrDefaultAsync(p => p.Id == id);
+            var request = await _db.Products
+                .AsNoTracking()
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            return request;
         }
 
         public async Task<ICollection<Product>> GetProductsAsync()
         {
-            return (await _db.Products.ToListAsync())!;
-        }
-        
-        public async Task<Product> GetByCodErp(string codErp)
-        {
-            return await _db.Products.FirstOrDefaultAsync(p => p.CodERP == codErp);
+            return await _db.Products.ToListAsync();
         }
 
         public async Task<Product> CreateAsync(Product product)

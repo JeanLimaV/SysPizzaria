@@ -1,5 +1,5 @@
-﻿using AutoMapper;
-using FluentValidation;
+﻿using System.Collections.ObjectModel;
+using AutoMapper;
 using SysPizzaria.Application.DTOs;
 using SysPizzaria.Application.Interfaces;
 using SysPizzaria.Application.Services.Interfaces;
@@ -30,11 +30,11 @@ namespace SysPizzaria.Application.Services
             return _mapper.Map<ProductDTO>(product);
         }
 
-        public async Task<ICollection<ProductDTO>> GetProducts()
+        public async Task<Collection<ProductDTO>> GetProducts()
         {
             var allProducts = await _productsRepository.GetProductsAsync();
 
-            return _mapper.Map<ICollection<ProductDTO>>(allProducts);
+            return _mapper.Map<Collection<ProductDTO>>(allProducts);
         }
 
         public async Task<ProductDTO> CreateAsync(ProductDTO productDto)
@@ -55,7 +55,6 @@ namespace SysPizzaria.Application.Services
         public async Task<ProductDTO> UpdateAsync(ProductDTO productDto)
         {
             var productExists = await _productsRepository.GetByIdAsync(productDto.Id);
-
             if (productExists == null)
                 throw new AppDomainUnloadedException("Não existe nenhum produto com esse Id cadastrado!");
 
@@ -70,7 +69,6 @@ namespace SysPizzaria.Application.Services
         public async Task DeleteAsync(ProductDTO productDto)
         {
             var productExists = await _productsRepository.GetByIdAsync(productDto.Id);
-
             if (productExists == null)
                 throw new AppDomainUnloadedException("Não existe nenhum produto com esse Id cadastrado!");
 

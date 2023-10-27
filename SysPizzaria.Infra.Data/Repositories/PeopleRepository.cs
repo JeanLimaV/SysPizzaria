@@ -19,9 +19,13 @@ namespace SysPizzaria.Infra.Data.Repositories
             return await _db.People.FirstOrDefaultAsync(c => c.Document == document);
         }
 
-        public async Task<Person> GetByIdAsync(int id)
+        public async Task<Person?> GetByIdAsync(int id)
         {
-            return await _db.People.FirstOrDefaultAsync(c => c.Id == id);
+            var request = await _db.People
+                .AsNoTracking()
+                .FirstOrDefaultAsync(c => c.Id == id);
+            
+            return request;
         }
 
         public async Task<ICollection<Person>> GetPeopleAsync()

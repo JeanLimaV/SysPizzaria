@@ -1430,19 +1430,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jeanc\\.nuget\\packages\\": {}
+    "/home/void_/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.IoC\\SysPizzaria.Infra.IoC.csproj",
+      "projectUniqueName": "/home/void_/SysPizzaria/SysPizzaria.Infra.IoC/SysPizzaria.Infra.IoC.csproj",
       "projectName": "SysPizzaria.Infra.IoC",
-      "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.IoC\\SysPizzaria.Infra.IoC.csproj",
-      "packagesPath": "C:\\Users\\jeanc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.IoC\\obj\\",
+      "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Infra.IoC/SysPizzaria.Infra.IoC.csproj",
+      "packagesPath": "/home/void_/.nuget/packages/",
+      "outputPath": "/home/void_/SysPizzaria/SysPizzaria.Infra.IoC/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jeanc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/void_/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1454,14 +1454,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Application\\SysPizzaria.Application.csproj": {
-              "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Application\\SysPizzaria.Application.csproj"
+            "/home/void_/SysPizzaria/SysPizzaria.Application/SysPizzaria.Application.csproj": {
+              "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Application/SysPizzaria.Application.csproj"
             },
-            "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\SysPizzaria.Domain.csproj": {
-              "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\SysPizzaria.Domain.csproj"
+            "/home/void_/SysPizzaria/SysPizzaria.Domain/SysPizzaria.Domain.csproj": {
+              "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Domain/SysPizzaria.Domain.csproj"
             },
-            "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.Data\\SysPizzaria.Infra.Data.csproj": {
-              "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.Data\\SysPizzaria.Infra.Data.csproj"
+            "/home/void_/SysPizzaria/SysPizzaria.Infra.Data/SysPizzaria.Infra.Data.csproj": {
+              "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Infra.Data/SysPizzaria.Infra.Data.csproj"
             }
           }
         }
@@ -1523,8 +1523,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -1533,7 +1532,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -1542,7 +1541,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'log4net 2.0.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'log4net 2.0.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "log4net",
       "targetGraphs": [
         "net6.0"
@@ -1552,7 +1551,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Migrations 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Migrations 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "Migrations",
       "targetGraphs": [
         "net6.0"

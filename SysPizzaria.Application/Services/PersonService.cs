@@ -1,5 +1,5 @@
+using System.Collections.ObjectModel;
 using AutoMapper;
-using FluentValidation;
 using SysPizzaria.Application.DTOs;
 using SysPizzaria.Application.Interfaces;
 using SysPizzaria.Application.Services.Interfaces;
@@ -30,14 +30,14 @@ namespace SysPizzaria.Application.Services
             return _mapper.Map<PersonDTO>(person);
         }
 
-        public async Task<ICollection<PersonDTO>> GetPeople()
+        public async Task<Collection<PersonDTO>> GetPeople()
         {
             var allPeople = await _peopleRepository.GetPeopleAsync();
 
-            return _mapper.Map<ICollection<PersonDTO>>(allPeople);
+            return _mapper.Map<Collection<PersonDTO>>(allPeople);
         }
 
-        public async Task<PersonDTO> CreateAsync(PersonDTO personDto)
+        public async Task<PersonDTO?> CreateAsync(PersonDTO personDto)
         {
             var personExists = await _peopleRepository.GetByDocument(personDto.Document);
 
@@ -64,7 +64,6 @@ namespace SysPizzaria.Application.Services
             
             await _peopleRepository.UpdateAsync(person);
             return personDto;
-
         }
 
         public async Task DeleteAsync(PersonDTO personDto)

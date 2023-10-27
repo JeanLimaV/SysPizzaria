@@ -11,8 +11,8 @@ using SysPizzaria.Infra.Data.Context;
 namespace SysPizzaria.Infra.Data.Migrations
 {
     [DbContext(typeof(BaseDbContext))]
-    [Migration("20231023173316_random")]
-    partial class random
+    [Migration("20231027123424_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -23,7 +23,7 @@ builder
 builder
     .Services    
     .AddServices();
-    
+
 builder
     .Services
     .CreateAutoMapper();

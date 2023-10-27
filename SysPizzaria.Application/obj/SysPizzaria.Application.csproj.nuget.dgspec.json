@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Application\\SysPizzaria.Application.csproj": {}
+    "/home/void_/SysPizzaria/SysPizzaria.Application/SysPizzaria.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Application\\SysPizzaria.Application.csproj": {
+    "/home/void_/SysPizzaria/SysPizzaria.Application/SysPizzaria.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Application\\SysPizzaria.Application.csproj",
+        "projectUniqueName": "/home/void_/SysPizzaria/SysPizzaria.Application/SysPizzaria.Application.csproj",
         "projectName": "SysPizzaria.Application",
-        "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Application\\SysPizzaria.Application.csproj",
-        "packagesPath": "C:\\Users\\jeanc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Application\\obj\\",
+        "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Application/SysPizzaria.Application.csproj",
+        "packagesPath": "/home/void_/.nuget/packages/",
+        "outputPath": "/home/void_/SysPizzaria/SysPizzaria.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jeanc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/void_/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,11 +26,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\SysPizzaria.Domain.csproj": {
-                "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\SysPizzaria.Domain.csproj"
+              "/home/void_/SysPizzaria/SysPizzaria.Domain/SysPizzaria.Domain.csproj": {
+                "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Domain/SysPizzaria.Domain.csproj"
               },
-              "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.Data\\SysPizzaria.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.Data\\SysPizzaria.Infra.Data.csproj"
+              "/home/void_/SysPizzaria/SysPizzaria.Infra.Data/SysPizzaria.Infra.Data.csproj": {
+                "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Infra.Data/SysPizzaria.Infra.Data.csproj"
               }
             }
           }
@@ -76,8 +76,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -86,21 +85,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\SysPizzaria.Domain.csproj": {
+    "/home/void_/SysPizzaria/SysPizzaria.Domain/SysPizzaria.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\SysPizzaria.Domain.csproj",
+        "projectUniqueName": "/home/void_/SysPizzaria/SysPizzaria.Domain/SysPizzaria.Domain.csproj",
         "projectName": "SysPizzaria.Domain",
-        "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\SysPizzaria.Domain.csproj",
-        "packagesPath": "C:\\Users\\jeanc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\obj\\",
+        "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Domain/SysPizzaria.Domain.csproj",
+        "packagesPath": "/home/void_/.nuget/packages/",
+        "outputPath": "/home/void_/SysPizzaria/SysPizzaria.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jeanc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/void_/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -141,8 +140,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -151,21 +149,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.Data\\SysPizzaria.Infra.Data.csproj": {
+    "/home/void_/SysPizzaria/SysPizzaria.Infra.Data/SysPizzaria.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.Data\\SysPizzaria.Infra.Data.csproj",
+        "projectUniqueName": "/home/void_/SysPizzaria/SysPizzaria.Infra.Data/SysPizzaria.Infra.Data.csproj",
         "projectName": "SysPizzaria.Infra.Data",
-        "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.Data\\SysPizzaria.Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\jeanc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Infra.Data\\obj\\",
+        "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Infra.Data/SysPizzaria.Infra.Data.csproj",
+        "packagesPath": "/home/void_/.nuget/packages/",
+        "outputPath": "/home/void_/SysPizzaria/SysPizzaria.Infra.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jeanc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/void_/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -177,8 +175,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\SysPizzaria.Domain.csproj": {
-                "projectPath": "C:\\Users\\jeanc\\OneDrive\\Área de Trabalho\\Projeto Web II\\src\\SysPizzaria\\SysPizzaria.Domain\\SysPizzaria.Domain.csproj"
+              "/home/void_/SysPizzaria/SysPizzaria.Domain/SysPizzaria.Domain.csproj": {
+                "projectPath": "/home/void_/SysPizzaria/SysPizzaria.Domain/SysPizzaria.Domain.csproj"
               }
             }
           }
@@ -232,8 +230,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -242,7 +239,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     }
