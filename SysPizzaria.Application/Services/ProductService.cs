@@ -66,14 +66,13 @@ namespace SysPizzaria.Application.Services
             return productDto;
         }
 
-        public async Task DeleteAsync(ProductDTO productDto)
+        public async Task DeleteAsync(int id)
         {
-            var productExists = await _productsRepository.GetByIdAsync(productDto.Id);
+            var productExists = await _productsRepository.GetByIdAsync(id);
             if (productExists == null)
                 throw new AppDomainUnloadedException("Não existe nenhum produto com esse Id cadastrado!");
-
-            var product = _mapper.Map<Product>(productDto);
-            await _productsRepository.DeleteAsync(product);
+            
+            await _productsRepository.DeleteAsync(productExists);
         }
         
         private bool ProductValidate(Product product)

@@ -15,20 +15,20 @@
 /home/void_/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/ref/SysPizzaria.Infra.Data.dll
 /home/void_/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/SysPizzaria.Infra.Data.pdb
 /home/void_/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/SysPizzaria.Infra.Data.genruntimeconfig.cache
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\bin\Debug\net6.0\SysPizzaria.Infra.Data.deps.json
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\bin\Debug\net6.0\SysPizzaria.Infra.Data.runtimeconfig.json
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\bin\Debug\net6.0\SysPizzaria.Infra.Data.dll
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\bin\Debug\net6.0\SysPizzaria.Infra.Data.pdb
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\bin\Debug\net6.0\SysPizzaria.Domain.dll
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\bin\Debug\net6.0\SysPizzaria.Domain.pdb
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\obj\Debug\net6.0\SysPizzaria.Infra.Data.csproj.AssemblyReference.cache
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\obj\Debug\net6.0\SysPizzaria.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\obj\Debug\net6.0\SysPizzaria.Infra.Data.AssemblyInfoInputs.cache
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\obj\Debug\net6.0\SysPizzaria.Infra.Data.AssemblyInfo.cs
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\obj\Debug\net6.0\SysPizzaria.Infra.Data.csproj.CoreCompileInputs.cache
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\obj\Debug\net6.0\SysPizzaria.Infra.Data.csproj.CopyComplete
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\obj\Debug\net6.0\SysPizzaria.Infra.Data.dll
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\obj\Debug\net6.0\refint\SysPizzaria.Infra.Data.dll
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\obj\Debug\net6.0\SysPizzaria.Infra.Data.pdb
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\obj\Debug\net6.0\SysPizzaria.Infra.Data.genruntimeconfig.cache
-C:\Users\jeanc\OneDrive\Área de Trabalho\Projeto Web II\src\SysPizzaria\SysPizzaria.Infra.Data\obj\Debug\net6.0\ref\SysPizzaria.Infra.Data.dll
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/bin/Debug/net6.0/SysPizzaria.Infra.Data.deps.json
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/bin/Debug/net6.0/SysPizzaria.Infra.Data.runtimeconfig.json
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/bin/Debug/net6.0/SysPizzaria.Infra.Data.dll
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/bin/Debug/net6.0/SysPizzaria.Infra.Data.pdb
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/bin/Debug/net6.0/SysPizzaria.Domain.dll
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/bin/Debug/net6.0/SysPizzaria.Domain.pdb
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/SysPizzaria.Infra.Data.csproj.AssemblyReference.cache
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/SysPizzaria.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/SysPizzaria.Infra.Data.AssemblyInfoInputs.cache
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/SysPizzaria.Infra.Data.AssemblyInfo.cs
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/SysPizzaria.Infra.Data.csproj.CoreCompileInputs.cache
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/SysPizzaria.Infra.Data.csproj.CopyComplete
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/SysPizzaria.Infra.Data.dll
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/refint/SysPizzaria.Infra.Data.dll
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/SysPizzaria.Infra.Data.pdb
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/SysPizzaria.Infra.Data.genruntimeconfig.cache
+C:/Users/jeanc/OneDrive/Área de Trabalho/Projeto Web II/src/SysPizzaria/SysPizzaria.Infra.Data/obj/Debug/net6.0/ref/SysPizzaria.Infra.Data.dll

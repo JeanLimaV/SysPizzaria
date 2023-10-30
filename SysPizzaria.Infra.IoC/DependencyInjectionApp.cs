@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SysPizzaria.Application.Interfaces;
@@ -25,7 +24,7 @@ namespace SysPizzaria.Infra.IoC
         {
             services.AddScoped<IPersonService, PersonService>();
             services.AddScoped<IProductService, ProductService>();
-            // services.AddScoped<IPurchaseService, PurchaseService>();
+            services.AddScoped<IPurchaseService, PurchaseService>();
             services.AddScoped<INotificator, Notificator>();
         }
 

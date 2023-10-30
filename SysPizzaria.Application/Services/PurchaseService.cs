@@ -1,8 +1,8 @@
-﻿using AutoMapper;
+﻿using System.Collections.ObjectModel;
+using AutoMapper;
 using FluentValidation;
 using SysPizzaria.Application.DTOs;
 using SysPizzaria.Application.Interfaces;
-using SysPizzaria.Application.Notifications;
 using SysPizzaria.Domain.Contracts.Interfaces.Repositories;
 using SysPizzaria.Domain.Entities;
 
@@ -10,17 +10,19 @@ namespace SysPizzaria.Application.Services
 {
     public class PurchaseService : IPurchaseService
     {
-        private readonly IMapper _mapper;
+        private readonly IMapper _mapper;        
         private readonly IPurchasesRepository _purchasesRepository;
-        private readonly IValidator<Purchase> _validator;
+        private readonly IPeopleRepository _peopleRepository;
+        private readonly IProductsRepository _productsRepository;
         private readonly INotificator _notificator;
 
-        public PurchaseService(IMapper mapper, IPurchasesRepository purchasesRepository, INotificator notificator, IValidator<Purchase> validator)
+        public PurchaseService(IMapper mapper, IPurchasesRepository purchasesRepository, IPeopleRepository peopleRepository, IProductsRepository productsRepository, INotificator notificator)
         {
-            _mapper = mapper;
+            _mapper = mapper;            
             _purchasesRepository = purchasesRepository;
+            _peopleRepository = peopleRepository;
+            _productsRepository = productsRepository;
             _notificator = notificator;
-            _validator = validator;
         }
 
         public async Task<PurchaseDTO> GetByIdAsync(int id)
@@ -32,23 +34,32 @@ namespace SysPizzaria.Application.Services
             return _mapper.Map<PurchaseDTO>(purchase);
         }
 
-        public async Task<ICollection<PurchaseDTO>> GetPurchasesAsync()
+        public async Task<Collection<PurchaseDTO>> GetPurchasesAsync()
         {
             var allPurchases = await _purchasesRepository.GetPurchasesAsync();
 
-            return _mapper.Map<ICollection<PurchaseDTO>>(allPurchases);
+            return _mapper.Map<Collection<PurchaseDTO>>(allPurchases);
         }
 
-        public Task<PurchaseDTO> CreateAsync(PurchaseDTO purchaseDto)
+        public async Task<PurchaseDTO> CreateAsync(PurchaseDTO purchaseDto)
         {
-            throw new NotImplementedException();
+            if (!PurchaseValidate(_mapper.Map<Purchase>(purchaseDto)))
+                return null;
+
+            var productId = await _productsRepository.GetByCodErp(purchaseDto.CodErp);
+            var personId = await _peopleRepository.GetByDocument(purchaseDto.Document);
+            var purchase = new Purchase(productId, personId);
+            
+            var data = await _purchasesRepository.CreateAsync(purchase);
+            purchaseDto.Id = data.Id;
+            return _mapper.Map<PurchaseDTO>(purchaseDto);
         }
 
         public Task<PurchaseDTO> UpdateAsync(PurchaseDTO purchaseDto)
         {
             throw new NotImplementedException();
         }
-
+        
         public Task DeleteAsync(PurchaseDTO purchaseDto)
         {
             throw new NotImplementedException();

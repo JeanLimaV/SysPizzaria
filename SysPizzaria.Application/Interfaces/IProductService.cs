@@ -9,6 +9,6 @@ namespace SysPizzaria.Application.Services.Interfaces
         Task<Collection<ProductDTO>> GetProducts();
         Task<ProductDTO> CreateAsync(ProductDTO productDto);
         Task<ProductDTO> UpdateAsync(ProductDTO productDto);
-        Task DeleteAsync(ProductDTO productDto);
+        Task DeleteAsync(int id);
     }
 }

@@ -33,10 +33,10 @@ namespace SysPizzaria.API.Controllers
 
         [HttpDelete]
         [Route("/API/Person/Delete")]
-        public async Task<IActionResult> Delete([FromBody] PersonDTO personDto)
+        public async Task<IActionResult> Delete(int id)
         {
-            await _personService.DeleteAsync(personDto);
-            return NoContent();
+            await _personService.DeleteAsync(id);
+            return Ok("Pessoa deletada com sucesso!");
         }
 
         [HttpGet]

@@ -66,14 +66,13 @@ namespace SysPizzaria.Application.Services
             return personDto;
         }
 
-        public async Task DeleteAsync(PersonDTO personDto)
+        public async Task DeleteAsync(int id)
         {
-            var personExists = await _peopleRepository.GetByIdAsync(personDto.Id);
+            var personExists = await _peopleRepository.GetByIdAsync(id);
             if (personExists == null)
                 throw new AppDomainUnloadedException("Não existe nenhuma pessoa com esse Id!");
             
-            var person = _mapper.Map<Person>(personDto);
-            await _peopleRepository.DeleteAsync(person);
+            await _peopleRepository.DeleteAsync(personExists);
         }
         
         private bool PersonValidate(Person person)
