@@ -12,7 +12,6 @@ namespace SysPizzaria.Infra.Data.Context
         public DbSet<Product> Products { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
         
-        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder

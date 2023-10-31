@@ -48,11 +48,22 @@ namespace SysPizzaria.Application.Services
 
             var productId = await _productsRepository.GetByCodErp(purchaseDto.CodErp);
             var personId = await _peopleRepository.GetByDocument(purchaseDto.Document);
-            var purchase = new Purchase(productId, personId);
-            
-            var data = await _purchasesRepository.CreateAsync(purchase);
-            purchaseDto.Id = data.Id;
-            return _mapper.Map<PurchaseDTO>(purchaseDto);
+
+            if (personId != null)
+            {
+                Console.WriteLine($"productId: {productId}");
+                Console.WriteLine($"personId: {personId}");
+
+                var purchase = new Purchase(productId, personId.Id);
+                
+                var data = await _purchasesRepository.CreateAsync(purchase);
+                purchaseDto.Id = data.Id;
+                return _mapper.Map<PurchaseDTO>(purchaseDto);
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public Task<PurchaseDTO> UpdateAsync(PurchaseDTO purchaseDto)

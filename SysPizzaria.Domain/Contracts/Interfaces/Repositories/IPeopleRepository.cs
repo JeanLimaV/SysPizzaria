@@ -4,7 +4,7 @@ namespace SysPizzaria.Domain.Contracts.Interfaces.Repositories
 {
     public interface IPeopleRepository
     {
-        Task<int> GetByDocument(string document);
+        Task<Person?> GetByDocument(string document);
         Task<Person?> GetByIdAsync(int id);
         Task<ICollection<Person>> GetPeopleAsync();
         Task<Person> CreateAsync(Person person);

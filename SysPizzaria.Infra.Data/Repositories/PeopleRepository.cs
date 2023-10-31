@@ -14,11 +14,12 @@ namespace SysPizzaria.Infra.Data.Repositories
             _db = db;
         }
 
-        public async Task<int> GetByDocument(string document)
+        public async Task<Person?> GetByDocument(string document)
         {
-            // return (await _db.People.FirstOrDefaultAsync(c => c.Document == document))?.Id ?? 0;
-            
-            return (await _db.People.FirstOrDefaultAsync(c => string.Equals(c.Document, document, StringComparison.OrdinalIgnoreCase)))?.Id ?? 0;
+            document = document.ToLower();
+            return (await _db.People
+                .AsNoTracking()
+                .FirstOrDefaultAsync(c => c.Document.ToLower() == document));
         }
 
         public async Task<Person?> GetByIdAsync(int id)
