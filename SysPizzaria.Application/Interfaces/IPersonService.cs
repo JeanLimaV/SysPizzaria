@@ -8,7 +8,7 @@ namespace SysPizzaria.Application.Services.Interfaces
         Task<PersonDTO> GetById(int id);
         Task<Collection<PersonDTO>> GetPeople();
         Task<PersonDTO?> CreateAsync(PersonDTO personDto);
-        Task<PersonDTO> UpdateAsync(PersonDTO personDto);
+        Task<PersonDTO?> UpdateAsync(PersonDTO? personDto);
         Task DeleteAsync(int id);
     }
 }

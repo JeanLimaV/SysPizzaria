@@ -40,7 +40,6 @@ namespace SysPizzaria.Application.Services
         public async Task<PersonDTO?> CreateAsync(PersonDTO personDto)
         {
             var personExists = await _peopleRepository.GetByDocument(personDto.Document);
-
             if (personExists != null)
                 throw new AppDomainUnloadedException("Esta Pessoa já está cadastrada!");
             
@@ -52,7 +51,7 @@ namespace SysPizzaria.Application.Services
             return personDto;
         }
 
-        public async Task<PersonDTO> UpdateAsync(PersonDTO personDto)
+        public async Task<PersonDTO?> UpdateAsync(PersonDTO personDto)
         {
             var personExists = await _peopleRepository.GetByIdAsync(personDto.Id);
             if (personExists == null)
@@ -82,7 +81,6 @@ namespace SysPizzaria.Application.Services
                 _notificator.Handle(validationResult.Errors);
                 return false;
             }
-
             return true;
         }
     }

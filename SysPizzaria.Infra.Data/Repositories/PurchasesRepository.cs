@@ -14,7 +14,7 @@ public class PurchasesRepository : IPurchasesRepository
         _db = db;
     }
     
-    public async Task<Purchase> GetByIdAsync(int id)
+    public async Task<Purchase?> GetByIdAsync(int id)
     {
         var purcharse = await _db.Purchases
             .Include(x => x.Product)
@@ -29,22 +29,24 @@ public class PurchasesRepository : IPurchasesRepository
         return (await _db.Purchases.ToListAsync())!;
     }
 
-    public async Task<ICollection<Purchase>> GetByPersonIdAsync(int productId)
+    public async Task<Purchase?> GetByPersonIdAsync(int personId)
     {
-        return (await _db.Purchases
-            .Include(x => x.Product)
+        var request = await _db.Purchases
+            .AsNoTracking()
             .Include(x => x.Person)
-            .Where(x => x.ProductId == productId)
-            .ToListAsync())!;
+            .FirstOrDefaultAsync(x => x.Id == personId);
+            
+        return request;
     }
 
-    public async Task<ICollection<Purchase>> GetByProductIdAsync(int personId)
+    public async Task<Purchase?> GetByProductIdAsync(int productId)
     {
-        return (await _db.Purchases
+        var request = await _db.Purchases
+            .AsNoTracking()
             .Include(x => x.Product)
-            .Include(x => x.Person)
-            .Where(x => x.PersonId == personId)
-            .ToListAsync())!;
+            .FirstOrDefaultAsync(x => x.Id == productId);
+
+        return request;
     }
 
     public async Task<Purchase> CreateAsync(Purchase purchase)

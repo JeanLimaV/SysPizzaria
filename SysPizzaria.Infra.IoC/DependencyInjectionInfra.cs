@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using SysPizzaria.Domain.Contracts.Interfaces.Repositories;
 using SysPizzaria.Infra.Data.Context;
 using SysPizzaria.Infra.Data.Repositories;

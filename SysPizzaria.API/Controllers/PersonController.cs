@@ -25,7 +25,7 @@ namespace SysPizzaria.API.Controllers
         
         [HttpPut]
         [Route("/API/Person/Update")]
-        public async Task<IActionResult> Update([FromBody] PersonDTO personDto)
+        public async Task<IActionResult> Update([FromBody] PersonDTO? personDto)
         {
             var person = await _personService.UpdateAsync(personDto);
             return Ok(person);

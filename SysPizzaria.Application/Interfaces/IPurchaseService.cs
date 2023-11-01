@@ -7,8 +7,8 @@ namespace SysPizzaria.Application.Interfaces
     {
         Task<PurchaseDTO> GetByIdAsync(int id);
         Task<Collection<PurchaseDTO>> GetPurchasesAsync();
-        Task<PurchaseDTO> CreateAsync(PurchaseDTO purchaseDto);
-        Task<PurchaseDTO> UpdateAsync(PurchaseDTO purchaseDto);
-        Task DeleteAsync(PurchaseDTO purchaseDto);
+        Task<PurchaseDTO?> CreateAsync(PurchaseDTO purchaseDto);
+        Task<PurchaseDTO?> UpdateAsync(PurchaseDTO purchaseDto);
+        Task DeleteAsync(int id);
     }
 }

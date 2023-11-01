@@ -4,7 +4,7 @@ namespace SysPizzaria.Domain.Contracts.Interfaces.Repositories
 {
     public interface IProductsRepository
     {
-        Task<int> GetByCodErp(string codErp);
+        Task<Product?> GetByCodErp(string codErp);
         Task<Product?> GetByIdAsync(int id);
         Task<ICollection<Product>> GetProductsAsync();
         Task<Product> CreateAsync(Product product);

@@ -1,6 +1,5 @@
 ﻿using System.Collections.ObjectModel;
 using AutoMapper;
-using FluentValidation;
 using SysPizzaria.Application.DTOs;
 using SysPizzaria.Application.Interfaces;
 using SysPizzaria.Domain.Contracts.Interfaces.Repositories;
@@ -12,16 +11,12 @@ namespace SysPizzaria.Application.Services
     {
         private readonly IMapper _mapper;        
         private readonly IPurchasesRepository _purchasesRepository;
-        private readonly IPeopleRepository _peopleRepository;
-        private readonly IProductsRepository _productsRepository;
         private readonly INotificator _notificator;
 
-        public PurchaseService(IMapper mapper, IPurchasesRepository purchasesRepository, IPeopleRepository peopleRepository, IProductsRepository productsRepository, INotificator notificator)
+        public PurchaseService(IMapper mapper, IPurchasesRepository purchasesRepository, INotificator notificator)
         {
             _mapper = mapper;            
             _purchasesRepository = purchasesRepository;
-            _peopleRepository = peopleRepository;
-            _productsRepository = productsRepository;
             _notificator = notificator;
         }
 
@@ -41,39 +36,43 @@ namespace SysPizzaria.Application.Services
             return _mapper.Map<Collection<PurchaseDTO>>(allPurchases);
         }
 
-        public async Task<PurchaseDTO> CreateAsync(PurchaseDTO purchaseDto)
+        public async Task<PurchaseDTO?> CreateAsync(PurchaseDTO purchaseDto)
         {
-            if (!PurchaseValidate(_mapper.Map<Purchase>(purchaseDto)))
+            var purchaseExists = await _purchasesRepository.GetByIdAsync(purchaseDto.Id);
+            if (purchaseExists != null)
+                throw new AppDomainUnloadedException("Não existe nenhuma Compra registrada com esse Id!");
+            
+            purchaseDto.Date = DateTime.Now;
+            var purchase = _mapper.Map<Purchase>(purchaseDto);
+            if (!PurchaseValidate(purchase))
                 return null;
-
-            var productId = await _productsRepository.GetByCodErp(purchaseDto.CodErp);
-            var personId = await _peopleRepository.GetByDocument(purchaseDto.Document);
-
-            if (personId != null)
-            {
-                Console.WriteLine($"productId: {productId}");
-                Console.WriteLine($"personId: {personId}");
-
-                var purchase = new Purchase(productId, personId.Id);
-                
-                var data = await _purchasesRepository.CreateAsync(purchase);
-                purchaseDto.Id = data.Id;
-                return _mapper.Map<PurchaseDTO>(purchaseDto);
-            }
-            else
-            {
-                return null;
-            }
+                    
+            await _purchasesRepository.CreateAsync(purchase);
+            return purchaseDto;
         }
 
-        public Task<PurchaseDTO> UpdateAsync(PurchaseDTO purchaseDto)
+        public async Task<PurchaseDTO?> UpdateAsync(PurchaseDTO purchaseDto)
         {
-            throw new NotImplementedException();
+            var purchaseExists = await _purchasesRepository.GetByIdAsync(purchaseDto.Id);
+            if (purchaseExists == null)
+                throw new AppDomainUnloadedException("Não existe nenhuma compra registrada com esse Id!");
+
+            purchaseDto.Date = DateTime.Now;
+            var purchase = _mapper.Map<Purchase>(purchaseDto);
+            if (!PurchaseValidate(purchase))
+                return null;
+            
+            await _purchasesRepository.UpdateAsync(purchase);
+            return purchaseDto;
         }
-        
-        public Task DeleteAsync(PurchaseDTO purchaseDto)
+
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var purchaseExists = await _purchasesRepository.GetByIdAsync(id);
+            if (purchaseExists == null)
+                throw new AppDomainUnloadedException("Esta compra nunca existiu!");
+
+            await _purchasesRepository.DeleteAsync(purchaseExists);
         }
         
         private bool PurchaseValidate(Purchase purchase)
@@ -83,7 +82,6 @@ namespace SysPizzaria.Application.Services
                 _notificator.Handle(validationResult.Errors);
                 return false;
             }
-
             return true;
         }
     }

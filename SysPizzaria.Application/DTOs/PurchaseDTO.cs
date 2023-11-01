@@ -2,9 +2,10 @@
 {
     public class PurchaseDTO
     {
-        public string CodErp { get; set; }
-        public string Document{ get; set; }
         public int Id { get; set; }
+        public int ProductId { get; set; }
+        public int PersonId { get; set; }
+        public DateTime Date { get; set; }
         
     }
 }
